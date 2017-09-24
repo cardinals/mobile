@@ -21,3 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/w', function (){
     return view('mobile');
 });
+
+Route::get('/t', function (){
+    return view('test');
+});

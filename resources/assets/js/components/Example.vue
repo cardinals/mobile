@@ -3,6 +3,7 @@
 
         <div class="layout">
             <div class="header navbar-fixed-top">
+
                 <div class="logo">
                     DSJ
 
@@ -14,13 +15,7 @@
             <div class="content">
 
                 <div class="body">
-
-
-                        <addItem v-if="additem"></addItem>
-                        <recent v-if="recent"></recent>
-                        <about v-if="about"></about>
-
-
+                    <router-view></router-view>
                 </div>
 
             </div>
@@ -46,13 +41,12 @@
 
     export default {
 
+
         data() {
             return {
                 bottomNav: 'dform',
-                Ntitle: "提交数据",
-                additem:true,
-                recent:false,
-                about:false
+                Ntitle: "",
+
             }
         },
         methods: {
@@ -61,26 +55,20 @@
                 switch (val) {
                     case "dform": {
                         this.Ntitle = "提交数据";
-                        this.additem = true;
-                        this.recent = false;
-                        this.about = false;
+                        this.$router.push({name:'additem'});
                         break;
                     }
                     case "recents": {
                         this.Ntitle = "提交记录";
-                        this.additem = false;
-                        this.recent = true;
-                        this.about = false;
+                        this.$router.push('recent');
 
                         break;
                     }
 
                     case "about": {
                         this.Ntitle = "关于";
-                        this.additem = false;
+                        this.$router.push('about');
 
-                        this.recent = false;
-                        this.about = true;
                         break;
                     }
 
@@ -88,6 +76,7 @@
                 }
             }
         }
+
     }
 </script>
 

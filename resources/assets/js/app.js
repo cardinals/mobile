@@ -20,10 +20,18 @@ window.Vue = require('vue');
 // Vue.use(ElementUI);
 
 //import museUI
-import Vue from 'vue'
+
 import MuseUI from 'muse-ui'
 import 'muse-ui/dist/muse-ui.css'
 Vue.use(MuseUI);
+
+//import vuex
+import vuex from 'vuex'
+Vue.use(vuex);
+
+import VueRouter from 'vue-router'
+Vue.use(VueRouter);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -35,6 +43,11 @@ Vue.component('addItem', require('./components/addItem.vue'));
 Vue.component('recent', require('./components/recent.vue'));
 Vue.component('about', require('./components/about.vue'));
 
+import store from './store'
+import router from './router'
+
 const inapp = new Vue({
-    el: '#inapp'
-});
+
+    store,
+    router
+}).$mount('#inapp');
