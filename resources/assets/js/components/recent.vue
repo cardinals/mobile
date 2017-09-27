@@ -16,7 +16,7 @@
                 </mu-tr>
             </mu-thead>
             <mu-tbody>
-                <mu-tr v-for="rdata,index in datas" :key="index" >
+                <mu-tr v-for="rdata,index in datas.data" :key="index" >
 
                     <mu-td>{{ rdata.id }}</mu-td>
                     <mu-td>{{ rdata.time }}</mu-td>
@@ -31,6 +31,12 @@
 
             </mu-tbody>
         </mu-table>
+        <div class="container">
+            <mu-flat-button label="上一页" class="demo-flat-button" @click="pagesp(datas.prev_page_url)" primary/>
+
+            <mu-flat-button label="下一页" class="demo-flat-button" @click="pagesp(datas.next_page_url)" primary/>
+
+        </div>
 
     </div>
 </template>
@@ -46,10 +52,6 @@
         data:function () {
             return {
                 select:false,
-                //分页
-                total: 30,
-                current: 3,
-                pageSize: 10
 
 
             }
@@ -58,22 +60,47 @@
         computed: {
 
             ...mapState([
-                'datas',
+                //'datas',
                 'items'
 
-            ])
-        },
+            ]),
 
-        methods: {
-            handleClick (newIndex) {
+            datas:{
+
+                get:function () {
+                    return this.$store.state.datas;
+                },
+
+                set:function (newValue) {
+                    this.$store.state.datas = newValue;
+                }
 
             },
 
+        },
+
+        methods:{
+            pagesp:function (val) {
+
+                axios.get(val).then(response => {
+                   this.datas = response.data;
+
+                });
+
+            }
 
         }
+
+
     }
+
 </script>
 
 <style>
+    .container{
 
+    }
+    .demo-flat-button {
+        margin: 12px;
+    }
 </style>

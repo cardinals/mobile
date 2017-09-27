@@ -14,10 +14,6 @@ const store = new vuex.Store({
         items:[],
         itemid:'',
         datas:{},
-
-
-
-
     },
 
 
@@ -52,6 +48,7 @@ const store = new vuex.Store({
         recent(state){
             axios.get('/datas').then(response => {
                 state.datas = response.data;
+
             });
         }
     },

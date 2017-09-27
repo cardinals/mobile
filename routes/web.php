@@ -42,8 +42,8 @@ Route::middleware(['auth'])->group(function () {
         return Data::with(['user:id,name','item:id,item','place:id,place'])
             ->where('user_id', '=', Auth::id())
             ->orderBy('updated_at','desc')
-            //->paginate(3);
-            ->get();
+            ->paginate(15);
+            //->get();
     });
 
     Route::get('/data', function (){
