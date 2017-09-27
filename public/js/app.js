@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 17);
+/******/ 	return __webpack_require__(__webpack_require__.s = 18);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -70,7 +70,7 @@
 "use strict";
 
 
-var bind = __webpack_require__(8);
+var bind = __webpack_require__(9);
 var isBuffer = __webpack_require__(26);
 
 /*global toString:true*/
@@ -379,9 +379,9 @@ module.exports = {
 
 "use strict";
 /* unused harmony export Store */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return mapState; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return mapMutations; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return mapGetters; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return mapState; });
+/* unused harmony export mapMutations */
+/* unused harmony export mapGetters */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return mapActions; });
 /* unused harmony export createNamespacedHelpers */
 /**
@@ -11547,7 +11547,7 @@ Vue$3.compile = compileToFunctions;
 
 module.exports = Vue$3;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
 /* 4 */
@@ -11871,6 +11871,12 @@ module.exports = function normalizeComponent (
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__(25);
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
@@ -11891,10 +11897,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(9);
+    adapter = __webpack_require__(10);
   } else if (typeof process !== 'undefined') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(9);
+    adapter = __webpack_require__(10);
   }
   return adapter;
 }
@@ -11968,7 +11974,7 @@ module.exports = defaults;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(28)))
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports) {
 
 var g;
@@ -11995,7 +12001,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12013,7 +12019,7 @@ module.exports = function bind(fn, thisArg) {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12024,7 +12030,7 @@ var settle = __webpack_require__(30);
 var buildURL = __webpack_require__(32);
 var parseHeaders = __webpack_require__(33);
 var isURLSameOrigin = __webpack_require__(34);
-var createError = __webpack_require__(10);
+var createError = __webpack_require__(11);
 var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(35);
 
 module.exports = function xhrAdapter(config) {
@@ -12200,7 +12206,7 @@ module.exports = function xhrAdapter(config) {
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12225,7 +12231,7 @@ module.exports = function createError(message, config, code, request, response) 
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12237,7 +12243,7 @@ module.exports = function isCancel(value) {
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12263,7 +12269,7 @@ module.exports = Cancel;
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14775,7 +14781,7 @@ if (inBrowser && window.Vue) {
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -14825,7 +14831,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -14875,7 +14881,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -14925,15 +14931,15 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(18);
+__webpack_require__(19);
 module.exports = __webpack_require__(69);
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14943,17 +14949,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_muse_ui_dist_muse_ui_css__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_muse_ui_dist_muse_ui_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_muse_ui_dist_muse_ui_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vuex__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vue_router__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vue_router__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__store__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__router__ = __webpack_require__(68);
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_axios__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_axios__);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-__webpack_require__(19);
+__webpack_require__(20);
 
 window.Vue = __webpack_require__(3);
 
@@ -14971,11 +14978,14 @@ window.Vue = __webpack_require__(3);
 
 
 
+
 Vue.use(__WEBPACK_IMPORTED_MODULE_0_muse_ui___default.a);
 
 //import vuex
 
+
 Vue.use(__WEBPACK_IMPORTED_MODULE_2_vuex__["a" /* default */]);
+
 
 
 Vue.use(__WEBPACK_IMPORTED_MODULE_3_vue_router__["a" /* default */]);
@@ -14987,25 +14997,37 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_3_vue_router__["a" /* default */]);
  */
 
 Vue.component('inform', __webpack_require__(49));
-Vue.component('addItem', __webpack_require__(14));
-Vue.component('recent', __webpack_require__(15));
-Vue.component('about', __webpack_require__(16));
+Vue.component('addItem', __webpack_require__(15));
+Vue.component('recent', __webpack_require__(16));
+Vue.component('about', __webpack_require__(17));
+
 
 
 
 
 var inapp = new Vue({
 
-  store: __WEBPACK_IMPORTED_MODULE_4__store__["a" /* default */],
-  router: __WEBPACK_IMPORTED_MODULE_5__router__["a" /* default */]
+    store: __WEBPACK_IMPORTED_MODULE_4__store__["a" /* default */],
+    router: __WEBPACK_IMPORTED_MODULE_5__router__["a" /* default */],
+
+    created: function created() {
+
+        __WEBPACK_IMPORTED_MODULE_6_axios___default.a.get('/place').then(function (response) {
+            __WEBPACK_IMPORTED_MODULE_4__store__["a" /* default */].state.places = response.data;
+        });
+
+        __WEBPACK_IMPORTED_MODULE_6_axios___default.a.get('/item').then(function (response) {
+            __WEBPACK_IMPORTED_MODULE_4__store__["a" /* default */].state.items = response.data;
+        });
+    }
 }).$mount('#inapp');
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-window._ = __webpack_require__(20);
+window._ = __webpack_require__(21);
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -15014,9 +15036,9 @@ window._ = __webpack_require__(20);
  */
 
 try {
-  window.$ = window.jQuery = __webpack_require__(22);
+  window.$ = window.jQuery = __webpack_require__(23);
 
-  __webpack_require__(23);
+  __webpack_require__(24);
 } catch (e) {}
 
 /**
@@ -15025,7 +15047,7 @@ try {
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(24);
+window.axios = __webpack_require__(6);
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -15059,7 +15081,7 @@ if (token) {
 // });
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -32148,10 +32170,10 @@ if (token) {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7), __webpack_require__(21)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8), __webpack_require__(22)(module)))
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -32179,7 +32201,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -42439,7 +42461,7 @@ return jQuery;
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports) {
 
 /*!
@@ -44822,12 +44844,6 @@ if (typeof jQuery === 'undefined') {
 
 
 /***/ }),
-/* 24 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(25);
-
-/***/ }),
 /* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -44835,9 +44851,9 @@ module.exports = __webpack_require__(25);
 
 
 var utils = __webpack_require__(0);
-var bind = __webpack_require__(8);
+var bind = __webpack_require__(9);
 var Axios = __webpack_require__(27);
-var defaults = __webpack_require__(6);
+var defaults = __webpack_require__(7);
 
 /**
  * Create an instance of Axios
@@ -44870,9 +44886,9 @@ axios.create = function create(instanceConfig) {
 };
 
 // Expose Cancel & CancelToken
-axios.Cancel = __webpack_require__(12);
+axios.Cancel = __webpack_require__(13);
 axios.CancelToken = __webpack_require__(42);
-axios.isCancel = __webpack_require__(11);
+axios.isCancel = __webpack_require__(12);
 
 // Expose all/spread
 axios.all = function all(promises) {
@@ -44920,7 +44936,7 @@ function isSlowBuffer (obj) {
 "use strict";
 
 
-var defaults = __webpack_require__(6);
+var defaults = __webpack_require__(7);
 var utils = __webpack_require__(0);
 var InterceptorManager = __webpack_require__(37);
 var dispatchRequest = __webpack_require__(38);
@@ -45222,7 +45238,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 "use strict";
 
 
-var createError = __webpack_require__(10);
+var createError = __webpack_require__(11);
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -45641,8 +45657,8 @@ module.exports = InterceptorManager;
 
 var utils = __webpack_require__(0);
 var transformData = __webpack_require__(39);
-var isCancel = __webpack_require__(11);
-var defaults = __webpack_require__(6);
+var isCancel = __webpack_require__(12);
+var defaults = __webpack_require__(7);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -45794,7 +45810,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 "use strict";
 
 
-var Cancel = __webpack_require__(12);
+var Cancel = __webpack_require__(13);
 
 /**
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -46527,6 +46543,10 @@ module.exports = function listToStyles (parentId, list) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue__);
 //
 //
 //
@@ -46566,13 +46586,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
             bottomNav: 'dform',
-            Ntitle: ""
+            Ntitle: "提交数据"
 
         };
     },
@@ -46591,6 +46613,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     {
                         this.Ntitle = "提交记录";
                         this.$router.push('recent');
+
+                        this.$store.dispatch('recent');
 
                         break;
                     }
@@ -46617,10 +46641,11 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("div", { staticClass: "layout" }, [
+  return _c("div", [
+    _c(
+      "div",
+      { staticClass: "layout" },
+      [
         _c("div", { staticClass: "header navbar-fixed-top" }, [
           _c("div", { staticClass: "logo" }, [
             _vm._v("\n                DSJ\n\n            ")
@@ -46629,42 +46654,46 @@ var render = function() {
           _c("strong", { staticClass: "Ntitle" }, [_vm._v(_vm._s(_vm.Ntitle))])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "content" }, [
+        _c("div", { staticClass: "content col-md-offset-2" }, [
           _c("div", { staticClass: "body" }, [_c("router-view")], 1)
-        ])
-      ]),
-      _vm._v(" "),
-      _c(
-        "mu-paper",
-        { staticClass: "navbar-fixed-bottom" },
-        [
-          _c(
-            "mu-bottom-nav",
-            {
-              attrs: { value: _vm.bottomNav },
-              on: { change: _vm.handleChange }
-            },
-            [
-              _c("mu-bottom-nav-item", {
-                attrs: { value: "dform", title: "提交数据", icon: "add" }
-              }),
-              _vm._v(" "),
-              _c("mu-bottom-nav-item", {
-                attrs: { value: "recents", title: "提交记录", icon: "description" }
-              }),
-              _vm._v(" "),
-              _c("mu-bottom-nav-item", {
-                attrs: { value: "about", title: "关于", icon: "note" }
-              })
-            ],
-            1
-          )
-        ],
-        1
-      )
-    ],
-    1
-  )
+        ]),
+        _vm._v(" "),
+        _c(
+          "mu-paper",
+          { staticClass: "navbar-fixed-bottom" },
+          [
+            _c(
+              "mu-bottom-nav",
+              {
+                attrs: { value: _vm.bottomNav },
+                on: { change: _vm.handleChange }
+              },
+              [
+                _c("mu-bottom-nav-item", {
+                  attrs: { value: "dform", title: "提交数据", icon: "add" }
+                }),
+                _vm._v(" "),
+                _c("mu-bottom-nav-item", {
+                  attrs: {
+                    value: "recents",
+                    title: "提交记录",
+                    icon: "description"
+                  }
+                }),
+                _vm._v(" "),
+                _c("mu-bottom-nav-item", {
+                  attrs: { value: "about", title: "关于", icon: "note" }
+                })
+              ],
+              1
+            )
+          ],
+          1
+        )
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -46711,7 +46740,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\n.additem{\n    margin-left: 30px;\n}\n.demo-raised-button {\n    margin-left: 80px;\n}\n\n\n", ""]);
+exports.push([module.i, "\n.additem{\n}\n.demo-raised-button {\n    margin-left: 80px;\n}\n\n\n", ""]);
 
 // exports
 
@@ -46753,27 +46782,105 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
-        return {
-
-            place: 0,
-            item: 0,
-            places: ['西二出', '西一二出', '西二原'],
-            items: ['氨氮', '浊度', '二氧化氯']
-        };
+        return {};
     },
 
 
-    computed: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["c" /* mapGetters */])(['doneTodos']), Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["e" /* mapState */])(['count'])),
-    methods: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["d" /* mapMutations */])([]), Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["b" /* mapActions */])([
-    // 映射 this.increment() 为 this.$store.dispatch('increment')
-    'increment']))
+    computed: _extends({
+        time: {
+
+            // getter
+            get: function get() {
+                return this.$store.state.time;
+            },
+            // setter
+            set: function set(newValue) {
+                this.$store.state.time = newValue;
+            }
+        },
+
+        online: {
+
+            get: function get() {
+                return this.$store.state.online;
+            },
+
+            set: function set(newValue) {
+                this.$store.state.online = newValue;
+            }
+
+        },
+
+        measure: {
+
+            get: function get() {
+                return this.$store.state.measure;
+            },
+
+            set: function set(newValue) {
+                this.$store.state.measure = newValue;
+            }
+
+        },
+
+        placeid: {
+
+            get: function get() {
+                return this.$store.state.placeid;
+            },
+
+            set: function set(newValue) {
+                this.$store.state.placeid = newValue;
+            }
+
+        },
+
+        itemid: {
+
+            get: function get() {
+                return this.$store.state.itemid;
+            },
+
+            set: function set(newValue) {
+                this.$store.state.itemid = newValue;
+            }
+
+        },
+
+        comment: {
+
+            get: function get() {
+                return this.$store.state.comment;
+            },
+
+            set: function set(newValue) {
+                this.$store.state.comment = newValue;
+            }
+
+        }
+
+    }, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["c" /* mapState */])(['places', 'items'])),
+
+    methods: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["b" /* mapActions */])(['save']))
 
 });
 
@@ -46789,26 +46896,43 @@ var render = function() {
     "div",
     { staticClass: "additem" },
     [
-      _c("br"),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("h3", [_vm._v("数据测定" + _vm._s(_vm.count))]),
+      _c("h3", [_vm._v("数据测定")]),
       _vm._v(" "),
       _c("mu-time-picker", {
         staticClass: "addtime",
-        attrs: { label: "测定时间", hintText: "测定时间", format: "24hr" }
+        attrs: { label: "测定时间", hintText: "测定时间", format: "24hr" },
+        model: {
+          value: _vm.time,
+          callback: function($$v) {
+            _vm.time = $$v
+          },
+          expression: "time"
+        }
       }),
       _c("br"),
       _vm._v(" "),
-      _c("mu-text-field", { attrs: { label: "实测数据", labelFloat: "" } }),
+      _c("mu-text-field", {
+        attrs: { label: "实测数据", labelFloat: "" },
+        model: {
+          value: _vm.measure,
+          callback: function($$v) {
+            _vm.measure = $$v
+          },
+          expression: "measure"
+        }
+      }),
       _c("br"),
       _vm._v(" "),
-      _c("mu-text-field", { attrs: { label: "在线数据", labelFloat: "" } }),
+      _c("mu-text-field", {
+        attrs: { label: "在线数据", labelFloat: "" },
+        model: {
+          value: _vm.online,
+          callback: function($$v) {
+            _vm.online = $$v
+          },
+          expression: "online"
+        }
+      }),
       _c("br"),
       _vm._v(" "),
       _c(
@@ -46816,19 +46940,30 @@ var render = function() {
         {
           attrs: { labelFocusClass: ["label-foucs"], label: "请选择测定地点" },
           model: {
-            value: _vm.place,
+            value: _vm.placeid,
             callback: function($$v) {
-              _vm.place = $$v
+              _vm.placeid = $$v
             },
-            expression: "place"
+            expression: "placeid"
           }
         },
-        _vm._l(_vm.places, function(text, index) {
-          return _c("mu-menu-item", {
-            key: index,
-            attrs: { value: index, title: text }
+        [
+          _vm._l(_vm.places, function(mplace, index) {
+            return _c("mu-menu-item", {
+              key: index,
+              attrs: { value: mplace.id, title: mplace.place }
+            })
+          }),
+          _vm._v(" "),
+          _c("hr"),
+          _vm._v(" "),
+          _c("mu-flat-button", {
+            staticClass: "demo-flat-button",
+            staticStyle: { "margin-left": "10%" },
+            attrs: { label: "新增地点", primary: "" }
           })
-        })
+        ],
+        2
       ),
       _c("br"),
       _vm._v(" "),
@@ -46837,38 +46972,39 @@ var render = function() {
         {
           attrs: { labelFocusClass: ["label-foucs"], label: "请选择测定类别" },
           model: {
-            value: _vm.item,
+            value: _vm.itemid,
             callback: function($$v) {
-              _vm.item = $$v
+              _vm.itemid = $$v
             },
-            expression: "item"
+            expression: "itemid"
           }
         },
-        _vm._l(_vm.items, function(text, index) {
+        _vm._l(_vm.items, function(mitem, index) {
           return _c("mu-menu-item", {
             key: index,
-            attrs: { value: index, title: text }
+            attrs: { value: mitem.id, title: mitem.item }
           })
         })
       ),
       _c("br"),
       _vm._v(" "),
-      _c("mu-text-field", { attrs: { label: "添加备注", labelFloat: "" } }),
+      _c("mu-text-field", {
+        attrs: { label: "添加备注", labelFloat: "" },
+        model: {
+          value: _vm.comment,
+          callback: function($$v) {
+            _vm.comment = $$v
+          },
+          expression: "comment"
+        }
+      }),
       _c("br"),
       _vm._v(" "),
       _c("mu-raised-button", {
         staticClass: "demo-raised-button",
         attrs: { label: "提交", primary: "" },
-        on: { click: _vm.increment }
+        on: { click: _vm.save }
       }),
-      _c("br"),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
       _c("br")
     ],
     1
@@ -46919,7 +47055,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -46930,6 +47066,15 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_axios__);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+//
+//
+//
+//
 //
 //
 //
@@ -46963,11 +47108,27 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+
+
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+
     data: function data() {
         return {
-            select: false
+            select: false,
+            //分页
+            total: 30,
+            current: 3,
+            pageSize: 10
+
         };
+    },
+
+    computed: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["c" /* mapState */])(['datas', 'items'])),
+
+    methods: {
+        handleClick: function handleClick(newIndex) {}
     }
 });
 
@@ -46982,14 +47143,6 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("br"),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
       _c(
         "mu-table",
         { ref: "table", attrs: { showCheckbox: _vm.select } },
@@ -47006,9 +47159,13 @@ var render = function() {
                   _vm._v(" "),
                   _c("mu-th", [_vm._v("地点")]),
                   _vm._v(" "),
-                  _c("mu-th", [_vm._v("在线")]),
+                  _c("mu-th", [_vm._v("项目")]),
                   _vm._v(" "),
                   _c("mu-th", [_vm._v("实测")]),
+                  _vm._v(" "),
+                  _c("mu-th", [_vm._v("在线")]),
+                  _vm._v(" "),
+                  _c("mu-th", [_vm._v("测量人")]),
                   _vm._v(" "),
                   _c("mu-th", [_vm._v("备注")])
                 ],
@@ -47020,26 +47177,30 @@ var render = function() {
           _vm._v(" "),
           _c(
             "mu-tbody",
-            [
-              _c(
+            _vm._l(_vm.datas, function(rdata, index) {
+              return _c(
                 "mu-tr",
+                { key: index },
                 [
-                  _c("mu-td", [_vm._v("1")]),
+                  _c("mu-td", [_vm._v(_vm._s(rdata.id))]),
                   _vm._v(" "),
-                  _c("mu-td", [_vm._v("13:34")]),
+                  _c("mu-td", [_vm._v(_vm._s(rdata.time))]),
                   _vm._v(" "),
-                  _c("mu-td", [_vm._v("西二出")]),
+                  _c("mu-td", [_vm._v(_vm._s(rdata.place.place))]),
                   _vm._v(" "),
-                  _c("mu-td", [_vm._v("0.34")]),
+                  _c("mu-td", [_vm._v(_vm._s(rdata.item.item))]),
                   _vm._v(" "),
-                  _c("mu-td", [_vm._v("0.23")]),
+                  _c("mu-td", [_vm._v(_vm._s(rdata.measure))]),
                   _vm._v(" "),
-                  _c("mu-td", [_vm._v("这是好的")])
+                  _c("mu-td", [_vm._v(_vm._s(rdata.online))]),
+                  _vm._v(" "),
+                  _c("mu-td", [_vm._v(_vm._s(rdata.user.name))]),
+                  _vm._v(" "),
+                  _c("mu-td", [_vm._v(_vm._s(rdata.comment))])
                 ],
                 1
               )
-            ],
-            1
+            })
           )
         ],
         1
@@ -47112,9 +47273,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
@@ -47134,14 +47292,6 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "about" }, [
-      _c("br"),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
       _c("h3", [_vm._v("介绍")]),
       _vm._v(" "),
       _c("p", [_vm._v("本项目前端采用VUEUI框架"), _c("br"), _vm._v("后端采用PHPLaravel框架")])
@@ -47165,52 +47315,62 @@ if (false) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_axios__);
+
 
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */]);
 var store = new __WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */].Store({
     state: {
-        count: 68,
 
-        todos: [{ id: 1, content: 'ete', done: true }, { id: 2, content: 'watch tv', done: false }]
-    },
-
-    //如此使用过后getters会暴露出getters对象
-    //即store.getters.doneTodos
-    getters: {
-        //Getters 接受 state 作为其第一个参数,Getters 也可以接受其他 getters 作为第二个参数
-        //doneTodosCount: (state, getters)
-
-        doneTodos: function doneTodos(state) {
-            return state.todos.filter(function (todo) {
-                return todo.done;
-            });
-        }
+        time: '',
+        online: '',
+        measure: '',
+        comment: '',
+        places: [],
+        placeid: '',
+        items: [],
+        itemid: '',
+        datas: {}
 
     },
+
+    getters: {},
 
     mutations: {
-        //mutation含有increment字符串的事件类型和一个回调函数，并且把state作为他的第一个参数
-        increment: function increment(state) {
-            //也可以传入第二个参数，对象类型的载荷payload:{amount:2}
-            //increment(state,payload){
-            state.count++;
-            //state.count += payload.amount
+        save: function save(state) {
+            __WEBPACK_IMPORTED_MODULE_2_axios___default.a.post('/data', {
+                time: state.time,
+                comment: state.comment,
+                online: state.online,
+                measure: state.measure,
+                itemid: state.itemid,
+                placeid: state.placeid
+
+            }).then(function (response) {
+                alert(response.data);
+            }).catch(function (error) {
+                alert(error);
+            });
+        },
+        recent: function recent(state) {
+            __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get('/datas').then(function (response) {
+                state.datas = response.data;
+            });
         }
     },
 
     actions: {
-        //传入和store实例含有相同方法和属性的对象context
-        // increment(context){
-        //     context.commit('increment')
-        //
-        // },
-
-        //或者使用ES6中的参数解构,来简化代码
-        increment: function increment(_ref) {
+        save: function save(_ref) {
             var commit = _ref.commit;
 
-            commit('increment');
+            commit('save');
+        },
+        recent: function recent(_ref2) {
+            var commit = _ref2.commit;
+
+            commit('recent');
         }
     }
 
@@ -47224,12 +47384,12 @@ var store = new __WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */].Store({
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_addItem_vue__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_addItem_vue__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_addItem_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_addItem_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_about_vue__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_about_vue__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_about_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_about_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_recent_vue__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_recent_vue__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_recent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_recent_vue__);
 
 

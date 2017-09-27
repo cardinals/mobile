@@ -12,8 +12,16 @@
     <title>Document</title>
 </head>
 <body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2" style="margin-top: 8%; margin-bottom: 10%">
 
-<inform id="inapp"></inform>
+            <inform id="inapp"></inform>
+        </div>
+
+    </div>
+
+</div>
 
 
 <script src="{{ asset('js/app.js') }}"></script>

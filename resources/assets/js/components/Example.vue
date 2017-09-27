@@ -12,7 +12,7 @@
 
 
             </div>
-            <div class="content">
+            <div class="content col-md-offset-2">
 
                 <div class="body">
                     <router-view></router-view>
@@ -20,24 +20,26 @@
 
             </div>
 
+            <mu-paper class="navbar-fixed-bottom">
+                <mu-bottom-nav :value="bottomNav" @change="handleChange">
+                    <mu-bottom-nav-item value="dform" title="提交数据" icon="add"/>
 
+                    <mu-bottom-nav-item value="recents" title="提交记录" icon="description"/>
+
+                    <mu-bottom-nav-item value="about" title="关于" icon="note"/>
+                </mu-bottom-nav>
+            </mu-paper>
         </div>
 
 
-        <mu-paper class="navbar-fixed-bottom">
-            <mu-bottom-nav :value="bottomNav" @change="handleChange">
-                <mu-bottom-nav-item value="dform" title="提交数据" icon="add"/>
 
-                <mu-bottom-nav-item value="recents" title="提交记录" icon="description"/>
-
-                <mu-bottom-nav-item value="about" title="关于" icon="note"/>
-            </mu-bottom-nav>
-        </mu-paper>
     </div>
 
 </template>
 
 <script>
+    import axios from 'axios'
+    import Vue from 'vue'
 
     export default {
 
@@ -45,7 +47,7 @@
         data() {
             return {
                 bottomNav: 'dform',
-                Ntitle: "",
+                Ntitle: "提交数据",
 
             }
         },
@@ -61,6 +63,8 @@
                     case "recents": {
                         this.Ntitle = "提交记录";
                         this.$router.push('recent');
+
+                        this.$store.dispatch('recent');
 
                         break;
                     }

@@ -2,33 +2,45 @@
 
     <div class="additem" >
 
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <h3>数据测定{{ count }}</h3>
 
-        <mu-time-picker class="addtime" label="测定时间" hintText="测定时间" format="24hr"/><br/>
-        <mu-text-field label="实测数据" labelFloat/><br/>
-        <mu-text-field label="在线数据" labelFloat/><br/>
-        <mu-select-field v-model="place" :labelFocusClass="['label-foucs']" label="请选择测定地点">
-            <mu-menu-item v-for="text,index in places" :key="index" :value="index" :title="text" />
+        <h3>数据测定</h3>
+
+        <mu-time-picker class="addtime" label="测定时间" hintText="测定时间" format="24hr" v-model="time"/><br/>
+
+
+
+        <mu-text-field label="实测数据" labelFloat v-model="measure"/><br/>
+
+
+        <mu-text-field label="在线数据" labelFloat v-model="online"/><br/>
+
+
+        <mu-select-field v-model="placeid" :labelFocusClass="['label-foucs']" label="请选择测定地点">
+
+
+            <mu-menu-item v-for="mplace,index in places" :key="index" :value="mplace.id" :title="mplace.place" />
+            <hr>
+            <mu-flat-button label="新增地点" class="demo-flat-button" style="margin-left: 10%" primary/>
         </mu-select-field><br/>
-        <mu-select-field v-model="item" :labelFocusClass="['label-foucs']" label="请选择测定类别">
-            <mu-menu-item v-for="text,index in items" :key="index" :value="index" :title="text" />
+
+
+
+        <mu-select-field v-model="itemid" :labelFocusClass="['label-foucs']" label="请选择测定类别">
+            <mu-menu-item v-for="(mitem,index) in items" :key="index" :value="mitem.id"  :title="mitem.item" />
         </mu-select-field><br/>
-        <mu-text-field label="添加备注" labelFloat/><br/>
-        <mu-raised-button label="提交" class="demo-raised-button" primary @click="increment"/><br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+
+
+
+        <mu-text-field label="添加备注" labelFloat v-model="comment"/><br/>
+
+
+        <mu-raised-button label="提交" class="demo-raised-button" primary @click="save"/><br/>
+
 
     </div>
 </template>
 <script>
     import { mapState } from 'vuex'
-    import { mapGetters } from 'vuex'
     import { mapMutations } from 'vuex'
     import { mapActions } from 'vuex'
     export default {
@@ -37,34 +49,100 @@
         data () {
             return {
 
-                place: 0,
-                item: 0,
-                places: ['西二出', '西一二出', '西二原'],
-                items: ['氨氮', '浊度', '二氧化氯']
             }
         },
 
 
         computed: {
-            // 使用对象展开运算符将 getters 混入 computed 对象中
-            ...mapGetters([
-                'doneTodos'
-            ]),
+            time:{
+
+                    // getter
+                    get: function () {
+                        return this.$store.state.time;
+                    },
+                    // setter
+                    set: function (newValue) {
+                        this.$store.state.time = newValue;
+                    }
+                },
+
+            online:{
+
+                get:function () {
+                    return this.$store.state.online;
+                },
+
+                set:function (newValue) {
+                    this.$store.state.online = newValue;
+                }
+
+            },
+
+            measure:{
+
+                get:function () {
+                    return this.$store.state.measure;
+                },
+
+                set:function (newValue) {
+                    this.$store.state.measure = newValue;
+                }
+
+            },
+
+            placeid:{
+
+                get:function () {
+                    return this.$store.state.placeid;
+                },
+
+                set:function (newValue) {
+                    this.$store.state.placeid = newValue;
+                }
+
+            },
+
+            itemid:{
+
+                get:function () {
+                    return this.$store.state.itemid;
+                },
+
+                set:function (newValue) {
+                    this.$store.state.itemid = newValue;
+                }
+
+            },
+
+            comment:{
+
+                get:function () {
+                    return this.$store.state.comment;
+                },
+
+                set:function (newValue) {
+                    this.$store.state.comment = newValue;
+                }
+
+            },
+
+
+
             ...mapState([
-                'count'
+
+                'places',
+                'items',
+
+
             ])
         },
+
         methods:{
-
-            ...mapMutations([
-
-            ]),
-
 
             //使用mapAction分发
             ...mapActions([
-                // 映射 this.increment() 为 this.$store.dispatch('increment')
-                'increment'
+
+                'save'
             ])
 
 
@@ -75,7 +153,6 @@
 
 <style>
     .additem{
-        margin-left: 30px;
 
     }
     .demo-raised-button {

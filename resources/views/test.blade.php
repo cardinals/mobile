@@ -18,25 +18,11 @@ test
 
 <script>
 
-    function timeout(ms) {
-        //创建promise对象
-        return new Promise((resolve, reject) => {
-            setTimeout(reject, ms);
-        });
-    }
-
-    //then()函数接受两个参数，第一个参数为resolve绑定的回调函数，
-    // 一旦resolve函数执行就会触发then函数的第一个参数
-    //第二个参数为reject绑定的回调函数，一旦reject函数执行就会触发第二个参数函数
-    timeout(3000)
-
-        .then(() => {
-            //setTimeout(resolve, ms);触发
-        alert('ok');
-    },() =>{
-        ////setTimeout(reject, ms);触发
-        alert('erro')
-    });
+items = [{"id":1,"item":"\u6d4a\u5ea6","created_at":null,"updated_at":null},{"id":2,"item":"\u6c28\u6c2e","created_at":null,"updated_at":null}]
+console.log(items)
+    items.filter(function (u) {
+        u ==
+    })
 </script>
 
 </body>

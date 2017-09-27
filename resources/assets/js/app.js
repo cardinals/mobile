@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -23,13 +22,16 @@ window.Vue = require('vue');
 
 import MuseUI from 'muse-ui'
 import 'muse-ui/dist/muse-ui.css'
+
 Vue.use(MuseUI);
 
 //import vuex
 import vuex from 'vuex'
+
 Vue.use(vuex);
 
 import VueRouter from 'vue-router'
+
 Vue.use(VueRouter);
 
 /**
@@ -45,9 +47,28 @@ Vue.component('about', require('./components/about.vue'));
 
 import store from './store'
 import router from './router'
+import axios from 'axios'
 
 const inapp = new Vue({
 
     store,
-    router
-}).$mount('#inapp');
+    router,
+
+    created() {
+
+        axios.get('/place').then(response => {
+            store.state.places = response.data;
+
+        });
+
+        axios.get('/item').then(response => {
+            store.state.items = response.data;
+        });
+
+
+
+
+
+
+    }
+    }).$mount('#inapp');
