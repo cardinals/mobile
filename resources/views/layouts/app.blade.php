@@ -36,7 +36,9 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        {{--<a href="{{ route('yj',['yj' => 'emergency']) }}">DSJ</a>--}}
+                        <a href="/yj">DSJ</a>
+                        {{--<a href="{{ route('yj') }}">DSJ</a>--}}
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -75,6 +77,8 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}">
+
+    </script>
 </body>
 </html>

@@ -8,30 +8,19 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
-//import mint ui
-// import MintUI from 'mint-ui'
-// import 'mint-ui/lib/style.css'
-// Vue.use(MintUI);
+//import iview
 
-//import element ui
-// import ElementUI from 'element-ui'
-// import 'element-ui/lib/theme-default/index.css'
-// Vue.use(ElementUI);
+import iView from 'iview';
+import 'iview/dist/styles/iview.css';
+Vue.use(iView);
 
-//import museUI
-
-import MuseUI from 'muse-ui'
-import 'muse-ui/dist/muse-ui.css'
-
-Vue.use(MuseUI);
 
 //import vuex
 import vuex from 'vuex'
-
 Vue.use(vuex);
 
-import VueRouter from 'vue-router'
 
+import VueRouter from 'vue-router'
 Vue.use(VueRouter);
 
 /**
@@ -40,16 +29,15 @@ Vue.use(VueRouter);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('inform', require('./components/Example.vue'));
-Vue.component('addItem', require('./components/addItem.vue'));
-Vue.component('recent', require('./components/recent.vue'));
-Vue.component('about', require('./components/about.vue'));
+//主入口组件
+Vue.component('dsj', require('./components/index.vue'));
+
 
 import store from './store'
 import router from './router'
 import axios from 'axios'
 
-const inapp = new Vue({
+const app = new Vue({
 
     store,
     router,
@@ -59,16 +47,12 @@ const inapp = new Vue({
         axios.get('/place').then(response => {
             store.state.places = response.data;
 
+
         });
 
         axios.get('/item').then(response => {
             store.state.items = response.data;
         });
 
-
-
-
-
-
     }
-    }).$mount('#inapp');
+}).$mount('#app');

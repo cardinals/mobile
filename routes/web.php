@@ -16,20 +16,17 @@ use App\Item;
 use App\Place;
 use App\Data;
 use Illuminate\Support\Facades\Auth;
-
-Route::get('/', function () {
-    return view('welcome');
-});
+use Illuminate\Support\Facades\Gate;
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
 
 
-Route::get('/t', function (){
-    return view('test');
-});
 
 
 
@@ -37,20 +34,28 @@ Route::get('/t', function (){
 Route::middleware(['auth'])->group(function () {
 
 
+
+    Route::view('yj/{yj?}','dsj')->where('yj','[\/\w\.-]*')->name('yj');
+   // Route::view('/yj','dsj')->name('yj');
+
+
+
     Route::get('/datas', function (){
 
         return Data::with(['user:id,name','item:id,item','place:id,place'])
             ->where('user_id', '=', Auth::id())
             ->orderBy('updated_at','desc')
-            ->paginate(15);
-            //->get();
+            //->paginate(15);
+            ->get();
     });
 
-    Route::get('/data', function (){
+    Route::get('/alldatas', function (){
 
-        return view('mobile');
+        return Data::with(['user:id,name','item:id,item','place:id,place'])
+            ->orderBy('updated_at','desc')
+            //->paginate(15);
+            ->get();
     });
-
 
     //place route
 
@@ -66,7 +71,7 @@ Route::middleware(['auth'])->group(function () {
         $places->place = $request->place;
 
         if ( $places->save()){
-            return "地点保存成功";
+            return "地保存成功";
         }
 
 
@@ -101,7 +106,7 @@ Route::middleware(['auth'])->group(function () {
         $data->user()->associate($user);
 
         if ($data->save()){
-            return '保存成功！';
+            return '数据保存成功！';
         }
 
 
@@ -109,3 +114,7 @@ Route::middleware(['auth'])->group(function () {
 
 
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+

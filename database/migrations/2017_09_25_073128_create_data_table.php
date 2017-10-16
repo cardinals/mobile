@@ -21,7 +21,7 @@ class CreateDataTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->integer('item_id')->unsigned();
             $table->integer('place_id')->unsigned();
-            $table->char('comment');
+            $table->char('comment')->nullable();
             $table->timestamps();
         });
     }

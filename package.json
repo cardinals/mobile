@@ -20,8 +20,12 @@
         "vue": "^2.1.10"
     },
     "dependencies": {
+        "element-ui": "^1.4.6",
+        "excellentexport": "^2.1.0",
+        "iview": "^2.4.0",
         "mint-ui": "^2.2.9",
         "muse-ui": "^2.1.0",
+        "validator.tool": "^1.0.8",
         "vue-router": "^2.7.0",
         "vuex": "^2.4.0"
     }

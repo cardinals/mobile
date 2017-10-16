@@ -1,32 +1,34 @@
 import Vue from 'vue'
 import vuex from 'vuex'
 import axios from 'axios'
+
 Vue.use(vuex);
+
+
 const store = new vuex.Store({
+
     state: {
 
-        time:'',
-        online:'',
-        measure:'',
-        comment:'',
-        places:[],
-        placeid:'',
-        items:[],
-        itemid:'',
-        datas:{},
+
+        time: '',
+        online: '',
+        measure: '',
+        comment: '',
+        places: [],
+        placeid: '',
+        items: [],
+        itemid: '',
+        datas: [],
     },
 
 
-    getters:{
+    getters: {},
 
+    mutations: {
 
-    },
-
-    mutations:{
-
-        save(state){
+        save(state) {
             axios.post('/data', {
-                time:state.time,
+                time: state.time,
                 comment: state.comment,
                 online: state.online,
                 measure: state.measure,
@@ -36,16 +38,26 @@ const store = new vuex.Store({
             })
                 .then(function (response) {
                     alert(response.data);
+                    state.time = '';
+                    state.online = '';
+                    state.measure = '';
+                    state.comment = '';
+
+
+
+
                 })
                 .catch(function (error) {
                     alert(error);
-                });
+                    //console.log(error);
 
+
+                });
 
 
         },
 
-        recent(state){
+        recent(state) {
             axios.get('/datas').then(response => {
                 state.datas = response.data;
 
@@ -53,20 +65,16 @@ const store = new vuex.Store({
         }
     },
 
-    actions:{
+    actions: {
 
 
-        save({commit}){
+        save({commit}) {
             commit('save')
         },
-        recent({commit}){
+        recent({commit}) {
             commit('recent')
         }
     },
-
-
-
-
 
 
 });

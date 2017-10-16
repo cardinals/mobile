@@ -30,4 +30,8 @@ class User extends Authenticatable
     public function datas(){
         return $this->hasMany(Data::class);
     }
+
+    public function isAdmin(){
+        return true;
+    }
 }

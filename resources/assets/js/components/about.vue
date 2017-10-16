@@ -7,11 +7,11 @@
     </div>
 </template>
 <script>
-    export default {}
+    export default {
+
+    }
 </script>
 
 <style>
-.about{
-    margin-left: 30px;
-}
+
 </style>
